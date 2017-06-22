@@ -35,21 +35,36 @@ public class BluetoothMaster {
 		NXTComm comm = conn.getNXTComm();
 		sc.useDelimiter(System.getProperty("line.separator"));
 		
-		while (true) {
-			try{
-				System.out.println("Input Kp: ");
-				String cmd = sc.next();
-				comm.write(cmd.getBytes());
-				System.out.println("Input Tn: ");
-				cmd = sc.next();
-				comm.write(cmd.getBytes());
-				System.out.println("Input Tv: ");
-				cmd = sc.next();
-				comm.write(cmd.getBytes());
-				
-			} catch(IOException e){
-				System.out.println(e.getMessage());
+		while(true) {
+			
+			byte[] reply;
+			try {
+				reply = comm.read();
+				String s=new String(reply);
+				System.out.println(s);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			
+			
 		}
+		
+//		while (true) {
+//			try{
+//				System.out.println("Input Kp: ");
+//				String cmd = sc.next();
+//				comm.write(cmd.getBytes());
+//				System.out.println("Input Tn: ");
+//				cmd = sc.next();
+//				comm.write(cmd.getBytes());
+//				System.out.println("Input Tv: ");
+//				cmd = sc.next();
+//				comm.write(cmd.getBytes());
+//				
+//			} catch(IOException e){
+//				System.out.println(e.getMessage());
+//			}
+//		}
 	}
 }
