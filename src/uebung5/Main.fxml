@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -11,19 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
-	prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="uebung5.FxmlController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uebung5.FxmlController">
 	<children>
-		<VBox layoutX="31.0" layoutY="47.0" prefHeight="200.0" prefWidth="100.0"
-			spacing="4.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0"
-			AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+		<VBox layoutX="31.0" layoutY="47.0" prefHeight="200.0" prefWidth="100.0" spacing="4.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
 			<children>
 				<HBox fillHeight="false">
 					<children>
-						<LineChart fx:id="areaBattery" maxHeight="50.0"
-							prefHeight="50.0" title="voltage">
+						<LineChart fx:id="areaBattery" maxHeight="50.0" prefHeight="50.0" title="voltage">
 							<xAxis>
 								<NumberAxis side="BOTTOM" />
 							</xAxis>
@@ -31,8 +24,7 @@
 								<NumberAxis side="LEFT" />
 							</yAxis>
 						</LineChart>
-						<LineChart fx:id="areaCycleTime" maxHeight="50.0"
-							prefHeight="50.0" title="T">
+						<LineChart fx:id="areaCycleTime" maxHeight="50.0" prefHeight="50.0" title="T">
 							<xAxis>
 								<NumberAxis side="BOTTOM" />
 							</xAxis>
@@ -44,8 +36,7 @@
 				</HBox>
 				<HBox fillHeight="false" prefHeight="155.0" prefWidth="784.0">
 					<children>
-						<LineChart fx:id="areaGyroAngel" maxHeight="50.0"
-							prefHeight="50.0" title="gyro_angel">
+						<LineChart fx:id="areaGyroAngel" maxHeight="50.0" prefHeight="50.0" title="gyro_angel">
 							<xAxis>
 								<NumberAxis side="BOTTOM" />
 							</xAxis>
@@ -53,8 +44,7 @@
 								<NumberAxis side="LEFT" />
 							</yAxis>
 						</LineChart>
-						<LineChart fx:id="areaOffset" maxHeight="50.0"
-							prefHeight="50.0" title="angel_offset">
+						<LineChart fx:id="areaOffset" maxHeight="50.0" prefHeight="50.0" title="angel_offset">
 							<xAxis>
 								<NumberAxis side="BOTTOM" />
 							</xAxis>
@@ -67,8 +57,7 @@
 						<Insets />
 					</VBox.margin>
 				</HBox>
-				<LineChart fx:id="areaMotor" maxHeight="50.0" prefHeight="50.0"
-					title="motor_output">
+				<LineChart fx:id="areaMotor" maxHeight="50.0" prefHeight="50.0" title="motor_output">
 					<xAxis>
 						<NumberAxis side="BOTTOM" />
 					</xAxis>
@@ -98,28 +87,24 @@
 										<TextField fx:id="tfTv" />
 									</children>
 								</HBox>
-								<Button fx:id="btSend" mnemonicParsing="false"
-									onAction="#buttonSendOnAction" text="Senden" />
+								<Button fx:id="btSend" mnemonicParsing="false" onAction="#buttonSendOnAction" text="Senden" />
 							</children>
 						</VBox>
 						<VBox>
 							<children>
 								<HBox>
 									<children>
-										<Button fx:id="btUp" mnemonicParsing="false" onAction="#buttonUp"
-											text="up" />
+      										<Button fx:id="btUp" mnemonicParsing="false" onAction="#buttonUp" text="up" />
 									</children>
 								</HBox>
 								<HBox>
 									<children>
-										<Button fx:id="btLeft" mnemonicParsing="false"
-											onAction="#buttonLeft" text="&lt;" />
-										<Button fx:id="btDown" mnemonicParsing="false"
-											onAction="#buttonDown" text="down" />
-										<Button fx:id="btRight" mnemonicParsing="false"
-											onAction="#buttonRight" text="&gt;" />
+										<Button fx:id="btLeft" mnemonicParsing="false" onAction="#buttonLeft" text="&lt;" />
+										<Button fx:id="btDown" mnemonicParsing="false" onAction="#buttonDown" text="down" />
+										<Button fx:id="btRight" mnemonicParsing="false" onAction="#buttonRight" text="&gt;" />
 									</children>
 								</HBox>
+                        <Button id="btStop" mnemonicParsing="false" text="stop" />
 							</children>
 						</VBox>
 					</children>
