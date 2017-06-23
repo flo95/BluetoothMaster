@@ -50,21 +50,5 @@ public class BluetoothMaster {
 			
 		}
 		
-//		while (true) {
-//			try{
-//				System.out.println("Input Kp: ");
-//				String cmd = sc.next();
-//				comm.write(cmd.getBytes());
-//				System.out.println("Input Tn: ");
-//				cmd = sc.next();
-//				comm.write(cmd.getBytes());
-//				System.out.println("Input Tv: ");
-//				cmd = sc.next();
-//				comm.write(cmd.getBytes());
-//				
-//			} catch(IOException e){
-//				System.out.println(e.getMessage());
-//			}
-//		}
 	}
 }

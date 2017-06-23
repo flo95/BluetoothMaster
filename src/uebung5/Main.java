@@ -69,6 +69,7 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
 			Pane root = (Pane) loader.load();
 			controller = loader.<FxmlController>getController();
+			controller.setNxtComm(comm);
 			//controller.addVoltageData(1, "test");
 			// BorderPane root = new BorderPane();
 			Scene scene = new Scene(root);

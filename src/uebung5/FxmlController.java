@@ -1,5 +1,7 @@
 package uebung5;
 
+import java.io.IOException;
+
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,6 +10,8 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import lejos.pc.comm.NXTComm;
+import lejos.pc.comm.NXTConnector;
 
 public class FxmlController {
 
@@ -50,6 +54,7 @@ public class FxmlController {
 	private XYChart.Series motor = new XYChart.Series<>();
 	private ObservableList<Series<Number, Number>> motorData;
 
+	private NXTComm comm;
 
 	@FXML
 	public void buttonSendOnAction() {
@@ -57,18 +62,46 @@ public class FxmlController {
 
 	@FXML
 	public void buttonUp() {
+		String toSend = "steering=0;driving=-0.15";
+		try {
+			comm.write(toSend.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	public void buttonLeft() {
+		String toSend = "steering=5;driving=0";
+		try {
+			comm.write(toSend.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	public void buttonDown() {
+		String toSend = "steering=0;driving=0.15";
+		try {
+			comm.write(toSend.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	public void buttonRight() {
+		String toSend = "steering=-5;driving=0";
+		try {
+			comm.write(toSend.getBytes());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void setText(String string) {
@@ -161,6 +194,10 @@ public class FxmlController {
 			}
 		});
 
+	}
+	
+	public void setNxtComm(NXTComm nxtComm){
+		this.comm = nxtComm;
 	}
 
 	
